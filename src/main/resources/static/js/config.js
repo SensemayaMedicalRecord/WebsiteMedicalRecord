@@ -23,7 +23,7 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
         .state('home', {
             url: "/home",
             templateUrl: "views/landing.html",
-            data: { pageTitle: 'Landing page', specialClass: 'landing-page' }
+            data: { pageTitle: 'Home', specialClass: 'landing-page' }
         })
 
         .state('login', {

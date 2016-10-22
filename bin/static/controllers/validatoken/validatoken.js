@@ -14,7 +14,7 @@ function validacionCtrl($location, $scope, $rootScope, $http,$rootScope, $cookie
 		//Solicita Token
 		$http({
 		method : "GET",
-		url : "http://localhost:8090/history/" + $rootScope.patient.idUser + "/" + $scope.tokenU 
+		url : $rootScope.hostPatiences + "/history/" + $rootScope.patient.idUser + "/" + $scope.tokenU 
 		}).success(function(resultado){	
 			
 			console.log(resultado)

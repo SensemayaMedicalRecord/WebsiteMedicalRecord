@@ -23,7 +23,7 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
         .state('home', {
             url: "/home",
             templateUrl: "views/landing.html",
-            data: { pageTitle: 'Landing page', specialClass: 'landing-page' }
+            data: { pageTitle: 'Home', specialClass: 'landing-page' }
         })
 
         .state('login', {
@@ -214,8 +214,8 @@ angular
     	
     	
         $rootScope.$state = $state;
-        $rootScope.host = "http://localhost:8090";
-        $rootScope.hostPatiences = "http://localhost:8090";
-        $rootScope.loginHost = "http://localhost:8191";
-        $rootScope.recordUrl = "http://localhost:8090/medicalRecord";
+        $rootScope.host = "http://172.99.106.99:8090";
+        $rootScope.hostPatiences = "http://172.99.106.99:8090";
+        $rootScope.loginHost = "http://172.99.106.99:8191";
+        $rootScope.recordUrl = "http://172.99.106.99:8090/medicalRecord";
     });

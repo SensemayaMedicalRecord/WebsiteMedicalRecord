@@ -54,7 +54,7 @@ $scope.registro = false;
 		$http({
 		method : "PUT",
 		data: {},
-		url : "http://localhost:8090/patient/token/" + userData.idUser
+		url : $rootScope.hostPatiences + "/patient/token/" + userData.idUser
 		}).success(function(resultado, status, headers, config){
 			
 			$location.path('/doc/validatoken');
