@@ -1,0 +1,25 @@
+<div class="tab-content">
+	<div id="home" class="tab-pane fade in active">
+		<h2>{{patient.firstName}} {{patient.lastName}}
+			{{patient.surName}}</h2>
+		<hr>
+	</div>
+	<div id="menu1" class="tab-pane fade">
+		<br/>
+		<h3>Antecendentes Hereditarios:</h3>
+		<p>
+			{{patientInfo.history[0].hereditaryDiseases}}
+		</p>
+		<hr/>
+		<h3>Antecendentes Patologicos:</h3>
+		<p>
+			{{patientInfo.history[0].backgroundPatology}}
+		</p>
+		<hr/>
+		<h3>Antecendentes No Patologicos:</h3>
+			<p>
+			{{patientInfo.history[0].backgroundNonPatology}}
+			</p>
+		<hr/>	
+	</div>
+</div>

@@ -1,0 +1,123 @@
+<div class="wrapper wrapper-content" style="padding-left:5%; padding-right:5%;" ng-controller="RegisterCtrl">
+    <div class="row">
+        <h3>Registro</h3>
+        <p>DE PACIENTES.</p>
+        <form class="form" role="form" ng-submit="registerClick()">
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>Nombre</label>
+                <input type="text" class="form-control" ng-model="register.firstName" placeholder="Nombre" required="">
+            </div>
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>Apellido paterno</label>
+                <input type="text" class="form-control" ng-model="register.lastName" placeholder="Apellido Paterno" required="">
+            </div>
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>Apellido materno</label>
+                <input type="text" class="form-control" ng-model="register.surName" placeholder="Apellido Materno" required="">
+            </div>
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>Fecha Nacimiento</label>
+                <input type="date" ng-model="register.dob" class="form-control" required="">
+            </div>
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>Sexo</label>
+                <label class="radio-inline"><input type="radio" ng-model="register.sex" name="optradio" value="M">Masculino</label>
+                <label class="radio-inline"><input type="radio" ng-model="register.sex" name="optradio" value="F">Femenino</label>
+            </div>
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>C.U.R.P.</label>
+                <input type="text" class="form-control" ng-model="register.curp" placeholder="CURP" required="">
+            </div>
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>R.F.C.</label>
+                <input type="text" class="form-control" ng-model="register.rfc" placeholder="RFC" required="">
+            </div>
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>Estado civil</label>
+                <select class="form-control" ng-model="register.estadoC">
+                  <option value="Indistinto">Indistinto</option>
+                  <option value="Soltero">Soltero</option>
+                  <option value="Casado">Casado</option>
+                </select>
+            </div>
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>Nacionalidad</label>
+                <select class="form-control" ng-model="register.nationality">
+                  <option value="Mexicano">Mexicano</option>
+                </select>
+            </div>
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>Lugar de nacimiento</label>
+                <input type="text" class="form-control" ng-model="register.lugarNac" placeholder="Lugar de nacimiento" >
+            </div>
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>Calle</label>
+                <input type="text" class="form-control" ng-model="register.calle" placeholder="Calle" >
+            </div>
+           <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>N&uacute;mero</label><br>
+                <label>Exterior</label>
+                <input type="text" class="form-control" ng-model="register.numEx" placeholder="#">
+                <label>Interior</label>
+                <input type="text" class="form-control" ng-model="register.numIn" placeholder="#">
+            </div>
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>Colonia</label>
+                <input type="text" class="form-control" ng-model="register.colonia" placeholder="Colonia">
+            </div>
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>C&oacute;digo postal</label>
+                <input type="text" class="form-control" ng-model="register.cp" placeholder="">
+            </div>
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>Pais</label>
+                <select class="form-control" ng-model="register.pais">
+                  <option value="Mexico">Mexico</option>
+                </select>
+            </div>
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>Estado</label>
+                <select class="form-control" ng-model="register.estado">
+                  <option value="">Seleccione</option>
+                  <option value="Guadalajara">Guadalajara</option>
+                  <option value="Monterrey">Monterrey</option>
+                  <option value="Mexico">Mexico</option>
+                </select>
+            </div>
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>Ocupaci&oacute;n</label>
+                <input type="text" class="form-control" ng-model="register.ocupacion"placeholder="Ocupaci&oacute;n" />
+            </div>
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>Celular</label>
+                <input type="text" class="form-control" ng-model="register.phoneNumber" placeholder="" required="" />
+            </div>
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>Religion</label>
+                <input type="text" class="form-control" ng-model="register.religion" placeholder="Religion" />
+            </div>
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>Email</label>
+                <input type="email" class="form-control" ng-model="register.email" placeholder="" />
+            </div>
+            <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                <label>Grupo sanguineo</label>
+                <select class="form-control" ng-model="register.bloodGroup">
+                  <option value="">Seleccione</option>
+                  <option value="O+">O+</option>
+                  <option value="A+">A+</option>
+                  <option value="B+">B+</option>
+                  <option value="B-">B-</option>
+                </select>
+            </div>
+            <input type="hidden" ng-model="register.cdUser" value="P"/>
+            <input type="hidden" ng-model="register.cdLogin" value="P"/>
+            <div class="form-group col-md-12 col-lg-12 col-sm-12">
+                <label>Comentarios</label>
+                <textarea class="form-control" ng-model="register.coment" cols="6"></textarea>
+            </div>
+            <button type="submit"  class="btn btn-primary block full-width m-b">Registrar</button>
+        </form>
+        <p class="m-t"> <small>Inspinia we app framework base on Bootstrap 3 &copy; 2014</small> </p>
+    </div>
+</div>

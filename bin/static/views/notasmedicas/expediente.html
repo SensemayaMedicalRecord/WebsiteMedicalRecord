@@ -1,0 +1,25 @@
+<div class="wrapper wrapper-content"
+	style="padding-left: 5%; padding-right: 5%;">
+	<div class="col-md-12 col-lg-12 col-sm-12" ng-controller="InfoPCtrl">
+		<ul class="nav nav-tabs">
+			<li class="active"><a data-toggle="tab"
+				href="doc/paciente/#home">Ficha de identificaci&oacute;n</a></li>
+			<li><a data-toggle="tab" href="doc/paciente/#menu1">Antecedentes</a></li>
+		</ul>
+		<div class="slide-animate"
+			ng-include="'views/notasmedicas/antecedentes.html'"></div>
+	</div>
+	<div ng-controller="RecetaCtrl">
+		<div class="col-md-12 col-lg-12 col-sm-12 text-right"
+			style="background-color: #fff;">
+			<a class="btn btn-primary" ng-click="verHistorialMedico()"> <span
+				class="fa fa-calendar"></span>Historial Notas M&eacute;dicas
+			</a> <a class="btn btn-primary" ng-click="realizatx()"><span
+				class="fa fa-file"></span> Crear Nota M&eacute;dica</a>
+		</div>
+		<div class="slide-animate"
+			ng-include="'views/notasmedicas/nota-medica.html'" style='scroll:auto'></div>
+		<div class="slide-animate"
+			ng-include="'views/notasmedicas/ficha-medica-form.html'"></div>
+	</div>
+</div>

@@ -1,0 +1,109 @@
+<!-- NOTA MEDICA LIST -->
+<div class="col-md-12 col-lg-12 col-sm-12 " ng-hide="showNotaMedica">
+	<h2>Historial Notas M&eacute;dicas</h2>
+	<div class="col-md-12 col-lg-12 col-sm-12">
+		
+		<div class='panel panel-default' ng-repeat="reg in medicalRecord">
+			<div class="panel-heading">{{reg.dateInserted | date:'medium'}}</div>
+			<div class="panel-body">
+				<div class='row'>
+					<div class='col-md-10 col-lg-10 col-sm-10'>
+						<p>
+							<span><b>Dx:</b></span><span>{{reg.diagnostic | limitTo:100}}</span>
+						</p>
+						<p>
+							<span><b>Tx:</b></span><span>{{reg.medicalTreatment | limitTo:100}}</span>
+						</p>
+					</div>
+					<div class='col-md-2 col-lg-2 col-sm-2'>
+						<button class="btn btn-success" data-toggle="modal"
+							data-target="#modalProducto" ng-click="detalle(reg)">Detalle</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<!-- NOTA MEDICA MODAL -->
+
+<div class="modal fade" id="modalProducto" tabindex="-1" role="dialog"
+	aria-labelledby="mySmallModalLabel" aria-hidden="true"
+	data-backdrop="static" data-keyboard="false">
+	<div class="modal-dialog modal-md modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">Detalle Nota
+					M&eacute;dica</h4>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal" role="form" name="formProductos"
+					id="formProductos" novalidate>
+					<div class="col-xs-6 col-lg-12 content-licencias"
+						style="padding-top: 5px; padding-bottom: 5px;">
+						<div>
+							<span><b>{{detalleHis.fecha | date:'medium'}}</b></span>
+						</div>
+					</div>
+
+					<div class="col-xs-3 col-lg-12">
+						<div>
+							<span><b>Medico:</b></span><span>{{detalleHis.medico}}</span>
+						</div>
+					</div>
+
+					<br>
+					<div class="col-xs-3 col-lg-12 content-licencias"
+						style="padding-top: 5px; padding-bottom: 5px;">
+						<div>
+							<span><b>Especialidad:</b></span><span>{{detalleHis.especialidad}}</span>
+						</div>
+					</div>
+
+					<div class="col-xs-3 col-lg-12 content-licencias"
+						style="padding-top: 5px; padding-bottom: 5px;">
+						<div>
+							<span><b>Subjetivo:</b></span><span>{{detalleHis.subjetivo}}</span>
+						</div>
+					</div>
+
+					<div class="col-xs-3 col-lg-12 content-licencias"
+						style="padding-top: 5px; padding-bottom: 5px;">
+						<div>
+							<span><b>Objetivo:</b></span><span>{{detalleHis.objective}}</span>
+						</div>
+					</div>
+					<div class="col-xs-3 col-lg-12 content-licencias"
+						style="padding-top: 5px; padding-bottom: 5px;">
+						<div>
+							<span><b>An&aacute;lisis:</b></span><span>{{detalleHis.analisis}}</span>
+						</div>
+					</div>
+					<div class="col-xs-3 col-lg-12 content-licencias"
+						style="padding-top: 5px; padding-bottom: 5px;">
+						<div>
+							<span><b>Dx:</b></span><span>{{detalleHis.diagnostico}}</span>
+						</div>
+					</div>
+					<div class="col-xs-3 col-lg-12 content-licencias"
+						style="padding-top: 5px; padding-bottom: 5px;">
+						<div>
+							<span><b>Tx:</b></span><span>{{detalleHis.tratamiento}}</span>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer" style="border: none !important;">
+				<div class="row col-xs-11 col-sm-10 col-md-10 col-lg-12">
+					<button type="button" class="btn bt_grande" data-dismiss="modal"
+						ng-click="cancel()" style="background: #4f8ff7; color: white;">Aceptar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

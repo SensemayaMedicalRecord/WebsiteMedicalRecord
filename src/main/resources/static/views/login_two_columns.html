@@ -1,0 +1,43 @@
+<div class="loginColumns animated fadeInDown" ng-controller="LonginCtrl as loginVm">
+    <div class="row">
+
+        <div class="col-md-6">
+          <br>
+          <br>
+          <br>
+          <br>
+            <img src="/img/logo_mr.png" ng-click="redirectHome()" class="img-responsive" style="cursor: pointer"/>
+
+        </div>
+        <div class="col-md-6">
+            <div class="ibox-content">
+            <form class="m-t" role="form" ng-submit="loginVm.login()" >
+                <div class="form-group">
+                    <input type="text" ng-model="loginVm.postObject.user" class="form-control" placeholder="CURP" required="">
+                </div>
+                <div class="form-group">
+                    <input type="password" ng-model="loginVm.postObject.password" class="form-control" placeholder="Password" required="">
+                </div>
+                <button type="button" ng-click="loginVm.loginClick()" class="btn btn-primary block full-width m-b">Login</button>
+
+                <a ui-sref="forgot_password"><small>Forgot password?</small></a>
+                <p class="text-muted text-center"><small>Do not have an account?</small></p>
+                <a class="btn btn-primary block full-width m-b" href="#/singup"role="button">Reg&iacute;strate</a>
+                <!-- <button type="button" ng-click="loginClick()" class="btn btn-primary block full-width m-b">Reg&iacute;strate</button> -->
+            </form>
+                <p class="m-t">
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+    <hr/>
+    <div class="row">
+        <div class="col-md-6">
+
+        </div>
+        <div class="col-md-6 text-right">
+            <small>© 2016-2017</small>
+        </div>
+    </div>
+</div>
