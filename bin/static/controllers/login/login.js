@@ -3,7 +3,7 @@ function LonginCtrl($location, $http, $rootScope, $cookies) {
 	var loginVm = this;
 
 	loginVm.postObject = {
-			user : "CHEC12345612345673",
+			user : "MOTA12345678912342",
 			password : "123"
 	};
 	

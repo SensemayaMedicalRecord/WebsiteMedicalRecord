@@ -4,7 +4,7 @@ function SearchCtrl($location, $scope, $http, $rootScope, $cookies, $cookies) {
 $scope.registro = false;
 	$scope.search = {
 		tipo : "CURP",
-		parametro : "VICT12345678901234",
+		parametro : "MOTA12345678912342",
 		parametro2 : "",
 		parametro3 : "",
 

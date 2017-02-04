@@ -30,7 +30,7 @@ function config($translateProvider) {
             HOME:'Inicio',
 
             // Define some custom text
-            WELCOME: 'Welcome Amelia',
+            WELCOME: 'Welcome',
             MESSAGEINFO: 'You have 42 messages and 6 notifications.',
             SEARCH: 'Search for something...',
             ACCESS_ECE: 'Acceder a registro clinico',
@@ -61,7 +61,7 @@ function config($translateProvider) {
             LAYOUTS: 'Esquemas',
 
             // Define some custom text
-            WELCOME: 'Bienvenido Amelia',
+            WELCOME: 'Bienvenido',
             MESSAGEINFO: 'Usted tiene 42 mensajes y 6 notificaciones.',
             SEARCH: 'Busca algo ...',
         });
