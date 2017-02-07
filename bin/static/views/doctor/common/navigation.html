@@ -6,9 +6,21 @@
                     IN+
                 </div>
             </li>  
-            <li ui-sref-active="active">
-                <a ui-sref="doc.search"><i class="fa fa-search"></i> <span class="nav-label"> Buscar</span></a>
-            </li>                     
+            <li ng-class="{active: $state.includes('screen')}">
+                <a href="index.html"><i class="fa fa-book"></i> <span class="nav-label ng-binding">Expediente Clinico</span> <span class="fa arrow"></span></a>
+                 <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('screen')}">
+                    <li ui-sref-active="active"><a ui-sref="doc.search" class="ng-binding" href="/screen/admin">Buscar</a></li>
+                    <li ui-sref-active="active"><a ui-sref="doc.paciente" class="ng-binding" href="/doc/paciente">Nuevo</a></li>
+                </ul>
+            </li>
+            <li ng-class="{active: $state.includes('screen')}">
+                <a href="index.html"><i class="fa fa-calendar-o"></i> <span class="nav-label ng-binding">Agenda M&eacute;dica</span> <span class="fa arrow"></span></a>
+                 <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('screen')}">
+                    <li ui-sref-active="active"><a ui-sref="screen.admin" class="ng-binding" href="/screen/admin">Admin</a></li>
+                    <li ui-sref-active="active"><a ui-sref="screen.screens" class="ng-binding" href="/screen/screens">Pantallas</a></li>
+                    <li ui-sref-active="active"><a ui-sref="screen.programas" class="ng-binding" href="/screen/programas">Programas </a></li>
+                </ul>
+            </li>                  
         </ul>
 
     </div>
