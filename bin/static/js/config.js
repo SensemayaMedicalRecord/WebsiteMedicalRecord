@@ -30,12 +30,35 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
             url: "/login",
             templateUrl: "views/login_two_columns.html",
             data: { pageTitle: 'Login', specialClass: 'gray-bg' }
-        }).state('singup', {
+        })
+        .state('singup', {
             url: "/singup",
             templateUrl: "views/registro-medico/registro-medico.html",
             data: { pageTitle: 'Registro Medico', specialClass: 'gray-bg' }
         })
 
+/* 
+ ____   _    ____ ___ _____ _   _ _____ _____ ____
+|  _ \ / \  / ___|_ _| ____| \ | |_   _| ____/ ___|
+| |_) / _ \| |    | ||  _| |  \| | | | |  _| \___ \
+|  __/ ___ \ |___ | || |___| |\  | | | | |___ ___) |
+|_| /_/   \_\____|___|_____|_| \_| |_| |_____|____/
+ */        
+        .state('pacientes', {
+            abstract: true,
+            url: "/pacientes",
+            templateUrl: "views/common/content.html",
+        })
+        .state('pacientes.busqueda',{
+        	url: "busqueda",
+        	templateUrl: "views/pacientes/busqueda.html",
+            data: { pageTitle: 'Busqueda'}
+        })
+        .state('pacientes.nuevo',{
+        	url: "nuevo",
+        	templateUrl: "views/pacientes/nuevo.html",
+            data: { pageTitle: 'Busqueda'}
+        })
         /**
             Views Patient
         */

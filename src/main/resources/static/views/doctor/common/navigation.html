@@ -13,6 +13,13 @@
                     <li ui-sref-active="active"><a ui-sref="doc.paciente" class="ng-binding" href="/doc/paciente">Nuevo</a></li>
                 </ul>
             </li>
+            <li ng-class="{active: $state.includes('pacientes')}">
+                <a href="index.html"><i class="fa fa-users"></i> <span class="nav-label ng-binding">Pacientes</span> <span class="fa arrow"></span></a>
+                 <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('pacientes')}">
+                    <li ui-sref-active="active"><a ui-sref="pacientes.busqueda" class="ng-binding" href="/pacientes/busqueda">Buscar</a></li>
+                    <li ui-sref-active="active"><a ui-sref="pacientes.nuevo" class="ng-binding" href="/pacientes/nuevo">Nuevo</a></li>
+                </ul>
+            </li>
             <li ng-class="{active: $state.includes('screen')}">
                 <a href="index.html"><i class="fa fa-calendar-o"></i> <span class="nav-label ng-binding">Agenda M&eacute;dica</span> <span class="fa arrow"></span></a>
                  <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('screen')}">
