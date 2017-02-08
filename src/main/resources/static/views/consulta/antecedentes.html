@@ -1,0 +1,101 @@
+<div class="wrapper wrapper-content  animated fadeInRight" ng-controller="consultaCtrl as consultaVm">
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="ibox">
+				<div class="ibox-header">
+					<h3 class="text-success"> <strong>{{consultaVm.nombre}} Mota Hernandez /</strong> <span class="text-info">Edad: 31 a&ntilde;os / O+</span> </h3>
+				</div>
+				<div class="ibox-content">
+					<div class="row">
+						<div class="col-sm-12 col-lg-12">
+							<div class="row">
+								<div class="btn-group">
+	               	<button class="btn btn-info " type="button">Antecedentes</button>
+	               	<button class="btn btn-white" ng-click="consultaVm.consultaShow()" type="button">Consultas</button>
+	             	</div>
+							</div>
+							<br>
+					</div>
+					<div class="clients-list">
+						<div class="row">
+							<div class="col-md-12 col-lg-12 col-sm-12">
+								<div class="tabs-container">
+                
+                	<ul class="nav nav-tabs">
+										<li class="active"><a data-toggle="tab" href="consulta/antecedentes/#personales"> Personales y familiares</a></li>
+										<li class=""><a data-toggle="tab" href="consulta/antecedentes/#alergias"> Aparatos y sistemas - Alergias</a></li>
+										<li class=""><a data-toggle="tab" href="consulta/antecedentes/#vacunas"> Vacunas</a></li>
+                	</ul>
+                    <div class="tab-content">
+                        <div id="personales" class="tab-pane active">
+                        	<div class="panel-body">
+                            
+                          	<div class="row">
+                          		<div class="col-md-12 col-lg-12 col-sm-12">
+                          			<div class="col-md-4 col-lg-4 col-sm-4">
+                          				<div class="form-group">
+                          					<p>Hereditarios y familiares</p>
+				                          		<textarea class="form-control" rows="10"></textarea>
+				                          </div>
+                          			</div>
+                          			<div class="col-md-4 col-lg-4 col-sm-4">
+                          				<div class="form-group">
+                          					<p>Personales <b>NO</b> patologicos</p>
+				                          		<textarea class="form-control" rows="10"></textarea>
+				                          </div>
+                          			</div>
+                          			<div class="col-md-4 col-lg-4 col-sm-4">
+                          				<div class="form-group">
+                          					<p>Personales patologicos</p>
+				                          		<textarea class="form-control" rows="10"></textarea>
+				                          </div>
+                          			</div>
+															</div>
+                          	</div>
+                          	<hr>
+                          	<div class="row">
+                          		<div class="col-md-12 col-lg-12 col-sm-12">
+                          			<div class="col-md-4 col-lg-4 col-sm-4">
+                          				<div class="form-group">
+                          					<p><b>Enfermedades Cronicas</b></p>
+				                          		<textarea class="form-control" rows="10"></textarea>
+				                          </div>
+                          			</div>
+															</div>
+                          	</div>
+                            
+                        	</div>
+                            
+                        </div>
+                        <div id="alergias" class="tab-pane">
+                            <div class="panel-body">
+                                <p><strong class="text-info"> Interrogatorio por aparatos y sistemas </strong></p>
+                            		<textarea class="form-control" rows="15"></textarea>
+                            		<p><strong class="text-info"> Alergias </strong></p>
+                            		<textarea class="form-control" rows="15"></textarea>
+                            </div>
+                        </div>
+                        <div id="vacunas" class="tab-pane">
+                            <div class="panel-body">
+                                <p><strong class="text-info"> Vacunas </strong></p>
+                            		<textarea class="form-control" rows="15"></textarea>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                <hr>
+                <div class="row">
+                	<div class="col-md-12 col-sm-12 col-lg-12">
+                		<button class="btn btn-info pull-right"> <li class="fa fa-save"></li> Guardar</button>
+                		<button class="btn pull-right"> <li class="fa fa-times"></li> Cancelar</button>
+                	</div>
+                </div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

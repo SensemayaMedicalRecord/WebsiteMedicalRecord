@@ -18,24 +18,90 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
         // Set to true if you want to see what and when is dynamically loaded
         debug: false
     });
-
+/*
+ _   _  ___  __  __ _____
+| | | |/ _ \|  \/  | ____|
+| |_| | | | | |\/| |  _|
+|  _  | |_| | |  | | |___
+|_| |_|\___/|_|  |_|_____|
+ */
     $stateProvider
         .state('home', {
             url: "/home",
             templateUrl: "views/landing.html",
             data: { pageTitle: 'Home', specialClass: 'landing-page' }
         })
-
+/*
+ _     ___   ____ ___ _   _
+| |   / _ \ / ___|_ _| \ | |
+| |  | | | | |  _ | ||  \| |
+| |__| |_| | |_| || || |\  |
+|_____\___/ \____|___|_| \_|
+ 
+ */                        
         .state('login', {
             url: "/login",
             templateUrl: "views/login_two_columns.html",
             data: { pageTitle: 'Login', specialClass: 'gray-bg' }
         })
+        
+/*
+ ____ ___ _   _  ____ _   _ ____
+/ ___|_ _| \ | |/ ___| | | |  _ \
+\___ \| ||  \| | |  _| | | | |_) |
+ ___) | || |\  | |_| | |_| |  __/
+|____/___|_| \_|\____|\___/|_|
+
+
+ */        
         .state('singup', {
             url: "/singup",
             templateUrl: "views/registro-medico/registro-medico.html",
             data: { pageTitle: 'Registro Medico', specialClass: 'gray-bg' }
         })
+
+/*
+  ____ ___  _   _ ____  _   _ _   _____  _
+ / ___/ _ \| \ | / ___|| | | | | |_   _|/ \
+| |  | | | |  \| \___ \| | | | |   | | / _ \
+| |__| |_| | |\  |___) | |_| | |___| |/ ___ \
+ \____\___/|_| \_|____/ \___/|_____|_/_/   \_\
+ 
+ */
+        
+        .state('consulta', {
+            abstract: true,
+            url: "/consulta",
+            templateUrl: "views/common/content.html",
+        })
+        .state('consulta.nueva',{
+        	url: "/nueva",
+        	templateUrl: "views/consulta/consulta-nueva.html",
+            data: { pageTitle: 'Nueva Consulta'}
+        })        
+        .state('consulta.antecedentes',{
+        	url: "/antecedentes",
+        	templateUrl: "views/consulta/antecedentes.html",
+        	data: { pageTitle: 'Antecedentes'}
+        })
+
+/*
+  ____    _    _     _____ _   _ ____    _    ____  ___ ___
+ / ___|  / \  | |   | ____| \ | |  _ \  / \  |  _ \|_ _/ _ \
+| |     / _ \ | |   |  _| |  \| | | | |/ _ \ | |_) || | | | |
+| |___ / ___ \| |___| |___| |\  | |_| / ___ \|  _ < | | |_| |
+ \____/_/   \_\_____|_____|_| \_|____/_/   \_\_| \_\___\___/
+*/		
+        .state('calendario', {
+            abstract: true,
+            url: "/calendario",
+            templateUrl: "views/common/content.html",
+        })
+        .state('calendario.main',{
+        	url: "/main",
+        	templateUrl: "views/calendario/calendario-main.html",
+            data: { pageTitle: 'Nueva Consulta'}
+        })        
 
 /* 
  ____   _    ____ ___ _____ _   _ _____ _____ ____
@@ -50,48 +116,17 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
             templateUrl: "views/common/content.html",
         })
         .state('pacientes.busqueda',{
-        	url: "busqueda",
-        	templateUrl: "views/pacientes/busqueda.html",
+        	url: "/busqueda",
+        	templateUrl: "views/patient/busqueda.html",
             data: { pageTitle: 'Busqueda'}
         })
         .state('pacientes.nuevo',{
-        	url: "nuevo",
-        	templateUrl: "views/pacientes/nuevo.html",
+        	url: "/nuevo",
+        	templateUrl: "views/patient/nuevo-paciente.html",
             data: { pageTitle: 'Busqueda'}
         })
-        /**
-            Views Patient
-        */
-        .state('dashboards', {
-            abstract: true,
-            url: "/dashboards",
-            templateUrl: "views/patient/common/content.html",
-        })
-        .state('dashboards.1', {
-            url: "/1",
-            templateUrl: "views/patient/dashboard_1.html",
-            resolve: {
-                loadPlugin: function ($ocLazyLoad) {
-                    return $ocLazyLoad.load([
-                        {
 
-                            serie: true,
-                            name: 'angular-flot',
-                            files: [ 'js/plugins/flot/jquery.flot.js', 'js/plugins/flot/jquery.flot.time.js', 'js/plugins/flot/jquery.flot.tooltip.min.js', 'js/plugins/flot/jquery.flot.spline.js', 'js/plugins/flot/jquery.flot.resize.js', 'js/plugins/flot/jquery.flot.pie.js', 'js/plugins/flot/curvedLines.js', 'js/plugins/flot/angular-flot.js', ]
-                        },
-                        {
-                            name: 'angles',
-                            files: ['js/plugins/chartJs/angles.js', 'js/plugins/chartJs/Chart.min.js']
-                        },
-                        {
-                            name: 'angular-peity',
-                            files: ['js/plugins/peity/jquery.peity.min.js', 'js/plugins/peity/angular-peity.js']
-                        }
-                    ]);
-                }
-            }
-        })
-
+        
         .state('historic', {
             url: "/historic",
             templateUrl: "views/patient/historic.html",
@@ -108,7 +143,7 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
         .state('doc', {
             abstract: true,
             url: "/doc",
-            templateUrl: "views/doctor/common/content.html",
+            templateUrl: "views/common/content.html",
         })
         .state('doc.dash', {
             url: "/dash",
@@ -165,44 +200,6 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
             templateUrl: "views/doctor/prescrib.html",
             data: { pageTitle: 'Receta' },
         })
-
-        /**
-            Views Pharmacy
-        */
-        .state('pharm', {
-            abstract: true,
-            url: "/pharm",
-            templateUrl: "views/pharmacy/common/content.html",
-        })
-        .state('pharm.dash', {
-            url: "/dash",
-            templateUrl: "views/pharmacy/dashboard_1.html",
-            resolve: {
-                loadPlugin: function ($ocLazyLoad) {
-                    return $ocLazyLoad.load([
-                        {
-
-                            serie: true,
-                            name: 'angular-flot',
-                            files: [ 'js/plugins/flot/jquery.flot.js', 'js/plugins/flot/jquery.flot.time.js', 'js/plugins/flot/jquery.flot.tooltip.min.js', 'js/plugins/flot/jquery.flot.spline.js', 'js/plugins/flot/jquery.flot.resize.js', 'js/plugins/flot/jquery.flot.pie.js', 'js/plugins/flot/curvedLines.js', 'js/plugins/flot/angular-flot.js', ]
-                        },
-                        {
-                            name: 'angles',
-                            files: ['js/plugins/chartJs/angles.js', 'js/plugins/chartJs/Chart.min.js']
-                        },
-                        {
-                            name: 'angular-peity',
-                            files: ['js/plugins/peity/jquery.peity.min.js', 'js/plugins/peity/angular-peity.js']
-                        }
-                    ]);
-                }
-            }
-        })
-        .state('read_pre', {
-            url: "/read_pre",
-            templateUrl: "views/pharmacy/read_pre.html",
-            data: { pageTitle: 'Receta' },
-        });
 
 }
 angular

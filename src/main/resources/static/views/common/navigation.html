@@ -20,14 +20,8 @@
                     <li ui-sref-active="active"><a ui-sref="pacientes.nuevo" class="ng-binding" href="/pacientes/nuevo">Nuevo</a></li>
                 </ul>
             </li>
-            <li ng-class="{active: $state.includes('screen')}">
-                <a href="index.html"><i class="fa fa-calendar-o"></i> <span class="nav-label ng-binding">Agenda M&eacute;dica</span> <span class="fa arrow"></span></a>
-                 <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('screen')}">
-                    <li ui-sref-active="active"><a ui-sref="screen.admin" class="ng-binding" href="/screen/admin">Admin</a></li>
-                    <li ui-sref-active="active"><a ui-sref="screen.screens" class="ng-binding" href="/screen/screens">Pantallas</a></li>
-                    <li ui-sref-active="active"><a ui-sref="screen.programas" class="ng-binding" href="/screen/programas">Programas </a></li>
-                </ul>
-            </li>                  
+            <li ui-sref-active="active"><a ui-sref="calendario.main" class="ng-binding" href="/calendario/main"><i class="fa fa-calendar-o"></i> Agenda M&eacute;dica</a></li>                  
+            <li ui-sref-active="active"><a ui-sref="consulta.nueva" class="ng-binding" href="/consulta/nueva"><i class="fa fa-book"></i> Consulta</a></li>                  
         </ul>
 
     </div>

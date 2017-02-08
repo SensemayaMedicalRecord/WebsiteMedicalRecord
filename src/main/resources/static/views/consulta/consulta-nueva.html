@@ -1,0 +1,76 @@
+<div class="wrapper wrapper-content  animated fadeInRight" ng-controller="consultaCtrl as consultaVm">
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="ibox">
+				<div class="ibox-header">
+					<h3 class="text-success"> <strong>{{consultaVm.nombre}} Mota Hernandez /</strong> <span class="text-info">Edad: 31 a&ntilde;os / O+</span> </h3>
+				</div>
+				<div class="ibox-content">
+					<div class="row">
+						<div class="col-sm-12 col-lg-12">
+							<div class="row">
+								<div class="btn-group">
+	               	<button class="btn btn-white" ng-click="consultaVm.antecedentes()" type="button">Antecedentes</button>
+	               	<button class="btn btn-info" type="button">Consultas</button>
+	             	</div>
+							</div>
+							<br>
+					</div>
+					<div class="clients-list">
+						<div class="row">
+							<div class="col-md-12 col-lg-12 col-sm-12">
+								<div class="tabs-container">
+                	<ul class="nav nav-tabs">
+										<li class="active"><a data-toggle="tab" href="consulta/nueva/#padecimientos"> Padecimiento</a></li>
+										<li class=""><a data-toggle="tab" href="consulta/nueva/#exploracion"> Exploraci&oacute;n</a></li>
+										<li class=""><a data-toggle="tab" href="consulta/nueva/#dx"> Diagn&oacute;stico</a></li>
+										<li class=""><a data-toggle="tab" href="consulta/nueva/#tx"> Tratamiento</a></li>
+										<li class=""><a data-toggle="tab" href="consulta/nueva/#estudios"> Estudios</a></li>
+                	</ul>
+                    <div class="tab-content">
+                        <div id="padecimientos" class="tab-pane active">
+                        	<div class="panel-body">
+                            <p><strong class="text-info"> Sintomas que refiere el paciente* </strong></p>
+                            <textarea class="form-control" rows="15"></textarea>
+                            
+                        	</div>
+                            
+                        </div>
+                        <div id="exploracion" class="tab-pane">
+                            <div class="panel-body">
+															<ng-include src="'views/consulta/exploracion.html'" />                               
+                            </div>
+                        </div>
+                        <div id="dx" class="tab-pane">
+                        	<div class="panel-body">
+                        		<ng-include src="'views/consulta/diagnostico.html'" />
+                        	</div>	
+                        </div>
+                        <div id="tx" class="tab-pane">
+                        	<div class="panel-body">
+                        		<ng-include src="'views/consulta/tratamiento.html'" />
+                        	</div>	
+                        </div>
+                        <div id="estudios" class="tab-pane">
+                        	<div class="panel-body">
+                        		<ng-include src="'views/consulta/estudios.html'" />
+                        	</div>	
+                        </div>
+                    </div>    
+                </div>
+                <hr>
+                <div class="row">
+                	<div class="col-md-12 col-sm-12 col-lg-12">
+                		<button class="btn btn-info pull-right"> <li class="fa fa-save"></li> Guardar</button>
+                		<button class="btn pull-right"> <li class="fa fa-times"></li> Cancelar</button>
+                	</div>
+                </div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,176 @@
+<div class="wrapper wrapper-content  animated fadeInRight">
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="ibox">
+				<div class="ibox-header">
+					<h3> <strong class="text-success">Nuevo Paciente</strong> </h3>
+				</div>
+				<div class="ibox-content">
+					<div class="clients-list">
+						<div class="row">
+							<div class="col-md-12 col-lg-12 col-sm-12" ng-show="!registro">
+								<div class="tabs-container">
+                
+                	<ul class="nav nav-tabs">
+										<li class="active"><a data-toggle="tab" href="pacientes/nuevo/#general"> Informaci&oacute; del paciente</a></li>
+										<li class=""><a data-toggle="tab" href="pacientes/nuevo/#adicional">Informac&oacute;n adicional</a></li>
+                	</ul>
+                    <div class="tab-content">
+                        <div id="general" class="tab-pane active">
+                            <div class="panel-body">
+															
+															<div class=row>
+																<div class="col-sm-6 col-lg-6">																	
+																	<strong class="text-info"> Datos generales </strong>
+																	<hr>
+																	<div class="row">
+																		<div class="col-sm-12 col-lg-12">
+																		<form class="form-horizontal">
+				                                <div class="form-group"><label class="col-sm-2 col-lg-2 control-label">Nombre(s): </label>				
+				                                    <div class="col-sm-8 col-lg-8"><input type="text" placeholder="Nombre(s)" class="form-control"></div>
+				                                </div>
+				                                <div class="form-group"><label class="col-sm-2 col-lg-2 control-label">Apellidos: </label>				
+				                                    <div class="col-sm-8 col-lg-8"><input type="text" placeholder="Apellidos" class="form-control"></div>
+				                                </div>
+				                                <div class="form-group"><label class="col-sm-2 col-lg-2 control-label">Fec, Nac.: </label>				
+				                                    <div class="col-sm-8 col-lg-8"><input type="text" placeholder="Fecha de nacieminto" class="form-control"></div>
+				                                </div>
+				                                <div class="form-group"><label class="col-sm-2 col-lg-2 control-label">CURP: </label>				
+				                                    <div class="col-sm-8 col-lg-8"><input type="text" placeholder="Apellidos" class="form-control"></div>
+				                                </div>
+				                                <div class="form-group"><label class="col-sm-2 col-lg-2 control-label">RFC: </label>				
+				                                    <div class="col-sm-8 col-lg-8"><input type="text" placeholder="Apellidos" class="form-control"></div>
+				                                </div>
+				                                <div class="form-group"><label class="col-sm-2 col-lg-2 control-label">Sexo: </label>				
+				                                    <div class="col-sm-8 col-lg-8">
+				                                    	<select class="form-control">
+				                                    		<option value="">Seleccione...</option>
+				                                    		<option value="M">Masculino</option>
+				                                    		<option value="F">Femenino</option>
+				                                    	</select>
+				                                    </div>
+				                                </div>
+				                                <div class="form-group"><label class="col-sm-2 col-lg-2 control-label">G. Sanguineo: </label>				
+				                                    <div class="col-sm-8 col-lg-8">
+				                                    	<select class="form-control">
+				                                    		<option value="">Seleccione...</option>
+				                                    		<option value="M">AB+</option>
+				                                    		<option value="F">AB-</option>
+				                                    		<option value="F">A+</option>
+				                                    		<option value="F">A-</option>
+				                                    		<option value="F">B+</option>
+				                                    		<option value="F">B-</option>
+				                                    		<option value="F">O+</option>
+				                                    		<option value="F">O-</option>
+				                                    	</select>
+				                                    </div>
+				                                </div>
+				                            </form>
+																		</div>
+																	</div>
+																</div>	
+																<div class="col-sm-6 col-lg-6">																	
+																	<strong class="text-info"> Datos de Contacto </strong>
+																	<hr>
+																	
+																	<div class="row">
+																		<div class="col-sm-12 col-lg-12">
+																		<form class="form-horizontal">
+				                                <div class="form-group"><label class="col-sm-2 col-lg-2 control-label">Telefono: </label>				
+				                                    <div class="col-sm-8 col-lg-8"><input type="text" placeholder="Telefono, Movil o Fijo" class="form-control input-sm"></div>
+				                                </div>
+				                                <div class="form-group"><label class="col-sm-2 col-lg-2 control-label">E-mail: </label>				
+				                                    <div class="col-sm-8 col-lg-8"><input type="text" placeholder="Correo Electronico" class="form-control input-sm"></div>
+				                                </div>
+				                                <div class="form-group"><label class="col-sm-2 col-lg-2 control-label">CP: </label>				
+				                                    <div class="col-sm-8 col-lg-8"><input type="text" placeholder="Codigo Postal" class="form-control input-sm"></div>
+				                                </div>
+				                                <div class="form-group"><label class="col-sm-2 col-lg-2 control-label">Colonia: </label>				
+				                                    <div class="col-sm-8 col-lg-8"><input type="text" placeholder="Codigo Postal" class="form-control input-sm"></div>
+				                                </div>
+							
+				                            </form>
+																		</div>
+																	</div>
+																	
+																</div>
+															</div>
+															
+                            </div>
+                            
+                            
+                        </div>
+                        <div id="adicional" class="tab-pane">
+                            <div class="panel-body">
+                                <strong></strong>
+																<div class="row">
+																		<div class="col-sm-12 col-lg-12">
+																		<form class="form-horizontal">
+				                                <div class="form-group"><label class="col-sm-2 col-lg-2 control-label">Escolaridad: </label>				
+				                                    <div class="col-sm-6 col-lg-6">
+				                                    	<select class="form-control">
+				                                    		<option value="">Seleccione...</option>
+				                                    		<option value="S">Secundaria</option>
+				                                    		<option value="P">Preparatoria</option>
+				                                    	</select>
+				                                    </div>
+				                                </div>
+				                                <div class="form-group"><label class="col-sm-2 col-lg-2 control-label">Lengua: </label>				
+				                                    <div class="col-sm-6 col-lg-6">
+				                                    	<select class="form-control">
+				                                    		<option value="">Seleccione...</option>
+				                                    		<option value="indiLeng">Indegena</option>
+				                                    		<option value="spainLeng">Español</option>
+				                                    		<option value="ambLeng">Ambos</option>
+				                                    	</select>
+				                                    </div>
+				                                </div>
+				                                <hr>
+				                                <div class="form-group"><label class="col-sm-2 col-lg-2 control-label">Derechohabiente: </label>				
+				                                    <div class="col-sm-6 col-lg-6">
+				                                    	<select class="form-control">
+				                                    		<option value="">Ninguno</option>
+				                                    	</select>
+				                                    </div>
+				                                </div>
+				                                <div class="form-group"><label class="col-sm-2 col-lg-2 control-label">POSPERA: </label>				
+				                                    <div class="col-sm-6 col-lg-6">
+				                                    	<select class="form-control">
+				                                    		<option value="">Seleccione...</option>
+				                                    		<option value="s">Si</option>
+				                                    		<option value="n">No</option>
+				                                    	</select>
+				                                    </div>
+				                                </div>
+				                                <div class="form-group"><label class="col-sm-2 col-lg-2 control-label">CNDH: </label>				
+				                                    <div class="col-sm-6 col-lg-6">
+				                                    	<select class="form-control">
+				                                    		<option value="">Seleccione...</option>
+				                                    		<option value="s">Si</option>
+				                                    		<option value="n">No</option>
+				                                    	</select>
+				                                    </div>
+				                                </div>
+				                            </form>
+																		</div>
+																	</div>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                <hr>
+								<div class="row">
+									<div class="col-sm-12 col-lg-12">
+										<button class="btn btn-info pull-right"> <span class="fa fa-save"></span> Guardar</button>
+										<button class="btn pull-right"> <span class="fa fa-trash"></span> Limpiar</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

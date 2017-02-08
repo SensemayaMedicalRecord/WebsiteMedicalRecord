@@ -33,17 +33,11 @@ function LonginCtrl($location, $http, $rootScope, $cookies) {
 		   var rol=data.rolUser;
 		   
 		   if(!data.success){return swal("Usuario o Contraseña Incorrecta!", "Intentalo de nuevo...!", "error");}
-	       if(data.patientProfile){
-	    	   
-	    	   $location.path('/dashboards/1');
-	    	   
-	       }else if(data.physicianProfile){
 	    	   
 	    	    $cookies.putObject("physicianSession", data.physicianProfile,{})
 	    	   	$rootScope.physicianProfileSession = data.physicianProfile;
 	       		$location.path('/doc/dash');
 	       		
-	       }
 	}
 	
 	function errorPetition(data){

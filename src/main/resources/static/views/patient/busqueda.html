@@ -1,0 +1,41 @@
+<div class="wrapper wrapper-content  animated fadeInRight">
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="ibox">
+				<div class="ibox-content">
+					<h2>Buscar Paciente</h2>
+					<div class="clients-list">
+
+						<div class="row">
+							<div class="col-md-12 col-lg-12 col-sm-12" ng-show="!registro">
+								<table class="table table-stripped">
+									<thead>
+										<tr>
+											<th>Nombre</th>
+											<th>Apellido Paterno</th>
+											<th>Apellido Materno</th>
+											<th>Curp</th>
+											<th>RFC</th>
+											<th style="text-align: center;">Solicitar Token</th>
+										</tr>
+									</thead>
+									<tr ng-repeat="reg in result">
+										<td data-title="'Identificador Rol'">{{reg.firstName}}</td>
+										<td data-title="'Identificador Rol'">{{reg.lastName}}</td>
+										<td data-title="'Identificador Rol'">{{reg.surName}}</td>
+										<td data-title="'Identificador Rol'">{{reg.curp}}</td>
+										<td data-title="'Identificador Rol'">{{reg.rfc}}</td>
+										<td data-title="'Identificador Rol'"
+											style="text-align: center;"><button
+												class="btn btn-success" ng-click="getToken(reg)">Solicitar</button></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
